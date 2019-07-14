@@ -4,8 +4,6 @@ function statement (invoice, plays) {
   return renderPlainText(createStatementData(invoice, plays));
 }
 
-export default statement;
-
 function renderPlainText(data) {
   let result = `Statement for ${data.customer}\n`;
   for(let perf of data.performances) {
@@ -21,3 +19,5 @@ function usd(aNumber) {
     minimumFractionDigits: 2
   }).format(aNumber / 100);
 }
+
+export default statement;

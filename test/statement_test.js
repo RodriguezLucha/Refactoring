@@ -8,7 +8,7 @@ const fs = require('fs');
 const util = require('util');
 const readFile = util.promisify(fs.readFile);
 
-import statement from '../src/bill.js';
+import statement from '../src/statement';
 
 describe('Bill', () => {
   it('returns a bill string', async () => {
